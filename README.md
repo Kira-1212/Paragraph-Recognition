@@ -22,7 +22,7 @@ For LSTM and GRU
 We have downloaded the val.json file that is provided with the PubLayNet dataset, it contains the details of the each document image in the set. We have used this file to get the bounding box details and category details of all the different structures in the document.
 We created a csv file from this data which gave us around 120761 rows.
 
-DataPreprocessing_LSTMGRU.ipynb contains the code for the datapreprocessing. It gets it input from val.json which is in the input folder.
+DataPreprocessing_LSTMGRU.ipynb under DataPreprocessing folder contains the code for the datapreprocessing. It gets it input from val.json which is in the input folder.
 
 This code was developed on Google Colab and uses the libraries that are already present. To run this file one has to just place the val.json in the drive or content folder and give its path. 
 
@@ -32,9 +32,21 @@ Transfer Learning doesn't need any preprocessing of the data as it uses pre trai
 
 # LSTM and GRU
 
+The models for LSTM and GRU were developed by splitting the csv file we obtained from data preprocessing into training and testing data. The code was developed on Google Colab and uses all the libraries already present. 
 
+LSTM_GRU.ipynb under models folder contains the code for both LSTM and GRU models.
 
+To run this code one has to give the correct location of the data.csv which is in the input folder.
 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+# Transfer Learning
 
+As transfer learning makes use of the pretrained models for Mask R-CNN and Faster R-CNN, we do not have any preprocessed data input file for this. 
+This code was also developed on Google Colab, and they are few modules that have to be installed. Commands for package installation are embedded in the code itself.
+
+TransferLearning.ipynb under models folder contains the code for the fine tuning we did on the pretrained models.
+
+This code takes in the document image pdf for test, one has to give the correct path of the document pdf to run this code.
+A sample of document image(test.pdf) that we have used is in the input folder.
 
